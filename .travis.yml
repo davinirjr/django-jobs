@@ -3,10 +3,6 @@ python:
   - "2.7"
 env:
   - DJANGO_VERSION=1.5.1
-before_install:
-  - sudo apt-get update && sudo apt-get build-dep python-imaging
 install:
  - pip install -q Django==$DJANGO_VERSION --use-mirrors
- - pip install -q Pillow --use-mirrors
- - pip install -r requirements.txt
 script: python runtests.py
